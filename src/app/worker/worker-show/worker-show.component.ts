@@ -12,7 +12,7 @@ export class WorkerShowComponent implements OnInit {
   constructor(private workersService: WorkersService) { }
 
   get worker(): WorkerModel {
-    return this.workersService.workers.find((worker) => worker.id === this.worker.id);
+    return this.workersService.workers.find((worker) => worker.uid === this.workerId);
   }
   ngOnInit() {
   }

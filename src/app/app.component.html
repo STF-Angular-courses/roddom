@@ -3,5 +3,6 @@
 <button (click)="backToList()">Workers</button>
 
 <app-worker-list *ngIf="activeWorkerList" (showWorker)="showWorker($event)"></app-worker-list>
+
 <app-worker-show *ngIf="!activeWorkerList && workerId" [workerId]="workerId"></app-worker-show>
 <h1 *ngIf="!activeWorkerList && !workerId">Not found data</h1>

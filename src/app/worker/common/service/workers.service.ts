@@ -7,21 +7,21 @@ export class WorkersService {
   constructor() { }
  workers: WorkerModel[] = [
    {
-     id: 1,
+     uid: 1,
      name: 'Ivan',
      gender: 'Male',
      position: 'chief',
      description: 'Main person in hospital'
    },
    {
-     id: 2,
+     uid: 2,
      name: 'Dima',
      gender: 'Male',
      position: 'Doctor',
      description: 'Do all work'
    },
    {
-     id: 3,
+     uid: 3,
      name: 'Katya',
      gender: 'Female',
      position: 'Doctor',
@@ -30,10 +30,10 @@ export class WorkersService {
  ];
 
   add() {
-    const lastId = this.workers[this.workers.length - 1].id;
+    const lastId = this.workers[this.workers.length - 1].uid;
     const newId = lastId + 1;
     this.workers.push({
-      id: newId,
+      uid: newId,
       name: 'new worker',
       gender: 'gender',
       position: 'new posititon',
@@ -41,7 +41,7 @@ export class WorkersService {
     });
   }
   remove(id: number): void {
-    const deleteIndex = this.workers.findIndex((worker) => worker.id === id);
+    const deleteIndex = this.workers.findIndex((worker) => worker.uid === id);
 
     this.workers.splice(deleteIndex, 1);
   }

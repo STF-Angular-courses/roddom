@@ -1,9 +1,9 @@
 <div>
-  <p>{{worker.id}}</p>
+  <p>{{worker.uid}}</p>
 <h1>{{worker.name | uppercase}}</h1><br>
   <p>{{worker.position}}</p><br>
   <p>{{worker.gender}}<p><br>
-  <button (click)="workersService.remove(worker.id)" color="warn">Delete</button>
-  <button (click)="show(worker.id)">More</button>
+  <button (click)="workersService.remove(worker.uid)" color="warn">Delete</button>
+  <button (click)="show(worker.uid)">More</button>
 </div>
 <hr>

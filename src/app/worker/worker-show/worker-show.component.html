@@ -1,10 +1,10 @@
-<div *ngIf="worker">
-  <p>{{worker.id}}</p>
+<div>
+  <p>{{worker.uid}}</p>
   <h1>{{worker.name | uppercase}}</h1><br>
   <p>{{worker.position}}</p><br>
   <p>{{worker.gender}}<p><br>
-  <p>{{worker.description | description}}</p>
-  <button (click)="workersService.remove(worker.id)" color="warn">Delete</button>s
+  <p>{{worker.description | description}}</p><br>
+  <button (click)="workersService.remove(worker.uid)" color="warn">Delete</button>s
 </div>
 <hr>
 
