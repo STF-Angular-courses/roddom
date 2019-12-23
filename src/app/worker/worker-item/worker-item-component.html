@@ -1,0 +1,9 @@
+<div>
+  <p>{{worker.id}}</p>
+<h1>{{worker.name | uppercase}}</h1><br>
+  <p>{{worker.position}}</p><br>
+  <p>{{worker.gender}}<p><br>
+  <button (click)="workersService.remove(worker.id)" color="warn">Delete</button>
+  <button (click)="show(worker.id)">More</button>
+</div>
+<hr>

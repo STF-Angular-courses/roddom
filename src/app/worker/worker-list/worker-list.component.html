@@ -1,0 +1,3 @@
+<p>Workers list</p>
+<button (click)="workersService.add()">Add</button>
+<app-worker-item *ngFor="let worker of workersService.workers" [worker]="worker" (giveId)="processWorkerById($event)"></app-worker-item>

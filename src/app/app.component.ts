@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'kolia';
+  workerId: number | null = null;
+  activeWorkerList = true;
+
+  showWorker(id: number): void {
+    this.workerId = id;
+    this.activeWorkerList = false;
+  }
+
+  backToList(): void {
+    this.workerId = null;
+    this.activeWorkerList = true;
+
+  }
 }
